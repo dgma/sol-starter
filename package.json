@@ -1,6 +1,6 @@
 {
   "name": "sol-starter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Template to bootstrap solidity project with foundry and hardhat",
   "author": "Dogma Labs",
   "license": "MIT",
