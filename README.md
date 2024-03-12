@@ -4,12 +4,12 @@ Template to bootstrap solidity project
 
 ## Features
 
-- Foundry for unit testing
-- Hardhat for integration tests & deployment
-- hardhat-sol-bundler for declarative and smart deployments
+- [Foundry]((https://book.getfoundry.sh/)) for unit testing
+- [Hardhat](https://hardhat.org/docs) for JS integration tests & deployment
+- [hardhat-sol-bundler](https://github.com/dgma/hardhat-sol-bundler) for declarative deployments and upgrades
 - linters, code formatter, pre-commit and pre-push hooks
 - Makefile & Docker dev container for convenient and safe development
-- Custom github action and quality gate workflow for fast CI strategy implementation
+- Custom github action and quality gate workflow for flexible CI strategy implementation
 
 ## Requirements
 
@@ -23,10 +23,19 @@ Template to bootstrap solidity project
 - Optional. [Docker](https://www.docker.com/)
   - You'll need to run docker if you want to use dev container and safely play with smartcontracts & scripts
 
+_note:_ For windows os you'll need to install `make`. For instance via choco: `sh choco install make`
+
+## Installation
+
+```sh
+make
+```
+
 ## Configuration
 
+- All commands/aliases are declared in the Makefile.
 - use forge as solidity formatter in your IDE settings
-  For VS it's recommended to use [Juan Blanco Plugin](https://github.com/juanfranblanco/vscode-solidity) and have the next sittings.json
+  - For VS it's recommended to use [Juan Blanco Plugin](https://github.com/juanfranblanco/vscode-solidity) and have the next sittings.json
 
 ```json
 {
@@ -50,13 +59,9 @@ Template to bootstrap solidity project
 
 Contributions are always welcome! Open a PR or an issue!
 
-Please install the following:
-
-And you probably already have `make` installed... but if not [try looking here.](https://askubuntu.com/questions/161104/how-do-i-install-make)
-
 ## Resources
 
 - [Foundry Documentation](https://book.getfoundry.sh/)
 - [Hardhat Documentation](https://hardhat.org/docs)
 - [hardhat-sol-bundler Documentation](https://github.com/dgma/hardhat-sol-bundler)
-```
+- [Makefile simple guide](https://opensource.com/article/18/8/what-how-makefile)
