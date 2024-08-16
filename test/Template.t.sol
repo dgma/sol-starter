@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity ^0.8.16;
+pragma solidity ^0.8.20;
 
 // solhint-disable no-global-import
 // solhint-disable no-console
@@ -16,7 +16,8 @@ contract TemplateTest is Test {
         template = new Template();
     }
 
-    function test_hello() public {
-        assertEq(template.hello(), "hello world");
+    function test_hello() public view {
+        string memory answer = template.hello();
+        assertEq(answer, "hello world");
     }
 }

@@ -17,8 +17,8 @@ install :; npm i && npx husky
 # CI installation
 install.ci :; env.add; npm ci
 
-# Update Dependencies
-forge.update:; forge update
+# Update foundry
+foundry.update:; foundryup
 
 # Compile contracts using hardhat
 compile :; npx hardhat compile
