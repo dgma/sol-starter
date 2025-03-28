@@ -16,9 +16,7 @@ runs:
       with:
         path: '**/node_modules'
         key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
-    - run: touch .env
-      shell: bash
-    - run: make install.ci
+    - run: make install-ci
       shell: bash
       if: steps.cache.outputs.cache-hit != 'true'
     - name: Install Foundry

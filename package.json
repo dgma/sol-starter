@@ -1,6 +1,6 @@
 {
   "name": "sol-starter",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Template to bootstrap solidity project with foundry and hardhat",
   "author": "Dzmitry Lahunouski",
   "license": "MIT",
@@ -15,18 +15,19 @@
     "@openzeppelin/contracts": "^5.0.2"
   },
   "devDependencies": {
-    "@dgma/hardhat-sol-bundler": "^0.5.8",
-    "@nomicfoundation/hardhat-foundry": "^1.1.2",
+    "@dgma/hardhat-sol-bundler": "^0.5.10",
+    "@nomicfoundation/hardhat-foundry": "^1.1.3",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@types/chai": "^4.3.17",
-    "@types/mocha": ">=10.0.7",
-    "dotenv": "^16.4.5",
-    "ethers": "^6.13.2",
-    "hardhat": "^2.22.8",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.9",
-    "prettier": "^3.3.3",
-    "solhint": "^5.0.3",
-    "solidity-coverage": "^0.8.12"
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.10",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "hardhat": "^2.22.19",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "prettier": "^3.5.3",
+    "solc": "^0.8.29",
+    "solhint": "^5.0.5",
+    "solidity-coverage": "^0.8.14"
   }
 }

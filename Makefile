@@ -1,29 +1,32 @@
 -include .env
 
-.PHONY: all test clean env.clean install compile snapshot env.add
+.PHONY: all test clean install compile snapshot 
 
-all: clean env.add install test
+all: init-clean add-env install test
 
-clean :; forge clean; rm -rf node_modules; 
+init-clean :; forge clean; rm -rf node_modules; 
 
 # Clean the repo
-env.clean :; init-clean; rm .env
+clean :; init-clean; rm .env
 
-env.add :; touch .env;
+add-env :; touch .env;
 
 # Local installation
-install :; npm i && npx husky
+install :; npm i && npx husky install
 
 # CI installation
-install.ci :; env.add; npm ci
+install-ci :; add-env; npm ci
 
-# Update foundry
-foundry.update:; foundryup
+# Update Dependencies
+forge-update:; forge update
 
 # Compile contracts using hardhat
 compile :; npx hardhat compile
 
-# Run integfation & unit tests
+# Run integration tests
+int :; npx hardhat test
+
+# Run integration & unit tests
 test :; forge test -vvv; npx hardhat test
 
 # Run particular unit test

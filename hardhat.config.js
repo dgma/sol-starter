@@ -24,7 +24,7 @@ module.exports = {
   },
   paths: {
     sources: "src",
-    tests: "test",
+    tests: "integration",
   },
   networks: {
     hardhat: {
@@ -38,22 +38,22 @@ module.exports = {
       accounts: deployerAccounts,
       deployment: deployments.arbitrumSepolia,
     },
-    baseSepolia: {
-      url: config?.parsed?.BASE_SEPOLIA_RPC || DEFAULT_RPC,
+    sepolia: {
+      url: config?.parsed?.SEPOLIA_RPC || DEFAULT_RPC,
       accounts: deployerAccounts,
-      deployment: deployments.baseSepolia,
+      deployment: deployments.sepolia,
     },
     opSepolia: {
       url: config?.parsed?.OP_SEPOLIA_RPC || DEFAULT_RPC,
       accounts: deployerAccounts,
-      deployment: deployments.opSepolia,
+      deployment: deployments.sepolia,
     },
   },
   etherscan: {
     apiKey: {
-      baseSepolia: config?.parsed?.BASE_API_KEY,
+      opSepolia: config?.parsed?.OPSCAN_API_KEY,
       arbitrumSepolia: config?.parsed?.ARBISCAN_API_KEY,
-      opSepolia: config?.parsed?.OP_API_KEY,
+      sepolia: config?.parsed?.ETHERSCAN_API_KEY,
     },
     customChains: [
       {
@@ -65,19 +65,19 @@ module.exports = {
         },
       },
       {
-        network: "baseSepolia",
-        chainId: 84532,
+        network: "sepolia",
+        chainId: 11155111,
         urls: {
-          apiURL: "https://api-sepolia.basescan.org/api",
-          browserURL: "https://sepolia.basescan.org/",
+          apiURL: "https://api-sepolia.etherscan.io/api",
+          browserURL: "https://sepolia.etherscan.io/",
         },
       },
       {
         network: "opSepolia",
-        chainId: 11155420,
+        chainId: 11155111,
         urls: {
-          apiURL: "​https://api-sepolia-optimistic.etherscan.io/api​",
-          browserURL: "https://sepolia-optimistic.etherscan.io",
+          apiURL: "https://sepolia-optimism.etherscan.io/api",
+          browserURL: "https://sepolia-optimism.etherscan.io/",
         },
       },
     ],

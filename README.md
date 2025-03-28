@@ -1,27 +1,19 @@
-# Sol-starter
+# Flankk protocol contract
 
-Template to bootstrap solidity project
+[![Quality Gate](https://github.com/dgma/flankk-contracts/actions/workflows/quality-gate.yml/badge.svg)](https://github.com/dgma/flankk-contracts/actions/workflows/quality-gate.yml)
 
-## Features
+Bidirectional payment channel protocol on top of EVM-compatible chains for instant & private payments
 
-- [Foundry]((https://book.getfoundry.sh/)) for unit testing
-- [Hardhat](https://hardhat.org/docs) for JS integration tests & deployment
-- [hardhat-sol-bundler](https://github.com/dgma/hardhat-sol-bundler) for declarative deployments and upgrades
-- linters, code formatter, pre-commit and pre-push hooks
-- Makefile & Docker dev container for convenient and safe development
-- Custom github action and quality gate workflow for flexible CI strategy implementation
+_Important_: The smart contracts is not audited, please be extra caution when use them in production
 
 ## Requirements
 
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
   - You'll know you've done it right if you can run `git --version`
-- [Foundry / Foundryup](https://github.com/gakonst/foundry)
-  - This will install `forge`, `cast`, and `anvil`
-  - You can test you've installed them right by running `forge --version` and get an output like: `forge 0.2.0 (f016135 2022-07-04T00:15:02.930499Z)`
-  - To get the latest of each, just run `foundryup`
 - [Node.js](https://nodejs.org/en)
-- Optional. [Docker](https://www.docker.com/)
-  - You'll need to run docker if you want to use dev container and safely play with smartcontracts & scripts
+- [Hardhat](https://hardhat.org/docs) for JS integration tests & deployment
+- [Foundry / Foundryup](https://github.com/gakonst/foundry) for unit testing
+- Optional. [Docker](https://www.docker.com/). Run docker if you want to use dev container
 
 _note:_ For windows os you'll need to install `make`. For instance via choco: `sh choco install make`
 

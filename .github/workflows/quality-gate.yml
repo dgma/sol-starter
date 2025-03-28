@@ -49,7 +49,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: rm foundry.toml
+      - run: rm foundry.toml && touch .env
       - uses: crytic/slither-action@v0.3.0
         id: slither
         with:
