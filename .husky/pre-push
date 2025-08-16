@@ -1,2 +1,1 @@
-make lint;
-make test;
+npm run test

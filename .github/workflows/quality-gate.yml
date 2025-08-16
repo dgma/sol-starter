@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/setup
-      - run: make lint
+      - run: npm run lint
 
   check-deploy:
     runs-on: ubuntu-latest
@@ -25,8 +25,8 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           foundry: true
-      - run: make compile
-      - run: make deploy
+      - run: npm run compile
+      - run: npm run deploy:hh
 
   test:
     runs-on: ubuntu-latest
@@ -35,7 +35,7 @@ jobs:
       - uses: ./.github/actions/setup
         with:
           foundry: true
-      - run: make test
+      - run: npm run test
 
   slither:
     permissions:

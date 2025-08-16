@@ -17,7 +17,7 @@ const DEFAULT_RPC = "https:random.com";
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: {
-    compilers: [{ version: "0.8.20" }],
+    compilers: [{ version: "0.8.28" }],
     metadata: {
       appendCBOR: false,
     },

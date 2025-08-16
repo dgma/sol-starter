@@ -15,12 +15,22 @@ _Important_: The smart contracts is not audited, please be extra caution when us
 - [Foundry / Foundryup](https://github.com/gakonst/foundry) for unit testing
 - Optional. [Docker](https://www.docker.com/). Run docker if you want to use dev container
 
-_note:_ For windows os you'll need to install `make`. For instance via choco: `sh choco install make`
-
 ## Installation
 
 ```sh
-make
+npm i && npx husky install
+```
+
+## Installing forge
+
+```sh
+forge install foundry-rs/forge-std
+```
+
+## Updating forge
+
+```sh
+forge update
 ```
 
 ## Configuration
